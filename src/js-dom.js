@@ -9,6 +9,20 @@
 // should switch from "Log Out" to "Log In".
 
 /// TODO: replace this with your code
+const buttonSwitch = document.querySelector('#auth')
+buttonSwitch.addEventListener("click",toggleTex)
+function toggleTex(button){
+    if (button.innerHTML == "Log Off"){
+        button.innerHTML = "Log On"
+    } else if (button.innerHTML == "Log On"){
+        button.innerHTML = "Log Off"
+    }
+}
+
+    
+
+
+
 
 // Send an alert
 //
@@ -18,6 +32,15 @@
 // text box. Then, they can submit the form to trigger the alert.
 
 /// TODO: replace this with your code
+
+document.querySelector('#submit') = function(){
+    const theAlert = document.querySelector("#alert-message").value;
+    alert(`${theAlert}`)
+    console.log("hello " , theAlert)
+
+
+}
+
 
 // Add an item
 //
@@ -80,3 +103,6 @@
 // change the color of the text to red..
 
 /// TODO: replace this with your code
+
+
+

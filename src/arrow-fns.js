@@ -5,7 +5,9 @@
 // Ex.:
 //   giveMeTwo();
 //   => 2
-const giveMeTwo = undefined;
+const giveMeTwo = undefined => {
+    return 2
+}
 
 // Set the value of addNums to an arrow function that takes in two numbers and
 // returns their sum.
@@ -13,7 +15,9 @@ const giveMeTwo = undefined;
 // Ex.:
 //   addNums(1, 2);
 //   => 3
-const addNums = undefined;
+const addNums = (x,y) => {
+return (x+y)
+}
 
 // Set the value of max to an arrow function that takes in two numbers and
 // returns the largest one.
@@ -21,7 +25,9 @@ const addNums = undefined;
 // Ex.:
 //   max(1, 2);
 //   => 2
-const max = undefined;
+const max = (x,y) =>{
+  if (x > y){return x;} else {return y}
+}
 // Note: you can also do this on one line:
 // const max = (a, b) => (a >= b ? a : b);
 
@@ -31,7 +37,13 @@ const max = undefined;
 // Ex.:
 //   evens([1, 2, 3, 4, 5]);
 //   => [2, 4]
-function evens(nums) {}
+function evens(nums) {
+    return nums.filter(x =>{
+        return x % 2 ===0
+    })
+}
+        
+
 
 // Given an array of names, return a new array of greetings for each name. Do
 // this using array iteration methods. Do NOT use a for loop.
@@ -39,7 +51,12 @@ function evens(nums) {}
 // Ex.:
 //   createGreetings(['Clive', 'Jill', 'Torgal']);
 //   => ['Hello, Clive!', 'Hello, Jill!', 'Hello, Torgal!']
-function createGreetings(names) {}
+let names = ['Clive', 'Jill', 'Torgal']
+function createGreetings(names) {
+
+    return names.forEach(names => `Hello, ${names}!`)
+
+}
 
 // Given an array of words, return a new array where each word is uppercased
 // and only includes words that are longer than 4 characters. Do this using
