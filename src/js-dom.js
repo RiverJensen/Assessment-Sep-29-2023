@@ -9,19 +9,20 @@
 // should switch from "Log Out" to "Log In".
 
 /// TODO: replace this with your code
-const buttonSwitch = document.querySelector('#auth')
-buttonSwitch.addEventListener("click",toggleTex)
-function toggleTex(button){
-    if (button.innerHTML == "Log Off"){
-        button.innerHTML = "Log On"
-    } else if (button.innerHTML == "Log On"){
-        button.innerHTML = "Log Off"
-    }
-}
 
     
 
+const loginButton = document.querySelector('#auth');
+let isLoggedIn = false;
 
+loginButton.addEventListener('click', function() {
+  if (isLoggedIn) {
+    loginButton.textContent = 'Log In';
+  } else {
+    loginButton.textContent = 'Log Out';
+  }
+  isLoggedIn = !isLoggedIn;
+});
 
 
 // Send an alert
