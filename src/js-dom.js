@@ -8,18 +8,14 @@
 // update and say "Log out". If a user clicks on the button again, its text
 // should switch from "Log Out" to "Log In".
 
-/// TODO: replace this with your code
-
-    
-
 const loginButton = document.querySelector('#auth');
 let isLoggedIn = false;
 
 loginButton.addEventListener('click', function() {
   if (isLoggedIn) {
-    loginButton.textContent = 'Log In';
+    loginButton.innerText = 'Log in';
   } else {
-    loginButton.textContent = 'Log Out';
+    loginButton.innerText = 'Log out';
   }
   isLoggedIn = !isLoggedIn;
 });
@@ -33,14 +29,19 @@ loginButton.addEventListener('click', function() {
 // text box. Then, they can submit the form to trigger the alert.
 
 /// TODO: replace this with your code
+// query select the form in question
+// add an event listener for the submit
+// query select the input field's value
+// alert(value)
 
-document.querySelector('#submit') = function(){
-    const theAlert = document.querySelector("#alert-message").value;
-    alert(`${theAlert}`)
-    console.log("hello " , theAlert)
 
+const alertForm = document.querySelector("#send-alert")
 
-}
+alertForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const input = document.querySelector("#alert-message")
+  alert(input.value)
+})
 
 
 // Add an item
@@ -69,7 +70,29 @@ document.querySelector('#submit') = function(){
 // Clicking on "Turn Stuff Red" should make text red and clicking on "Turn
 // Stuff Blue" should make text blue.
 
-/// TODO: replace this with your code
+/// 
+// query select each button and save to variables
+// add event listener for each button 'click'
+// querySelectorAll for elements with class name 'changes-colors' (querySelectorAll returns an array instead of an object)
+// change each element's style.color to "blue"
+
+const blueBtn = document.querySelector("#blue")
+const redBtn = document.querySelector("#red")
+const colorElements = document.querySelectorAll(".changes-colors")
+// colorElements is an array of DOM objects
+
+blueBtn.addEventListener('click', () => {
+  for (let element of colorElements) {
+    element.style.color = "blue"
+  }
+})
+
+redBtn.addEventListener('click', () => {
+  for (let element of colorElements) {
+    element.style.color = "red"
+  }
+})
+
 
 // Calculate factorial
 //
@@ -95,7 +118,7 @@ document.querySelector('#submit') = function(){
 // checks the length of the text entered into the <textarea> when the user
 // submits the form.
 //
-//  If the text is three or more characters long, change
+//  If the text is four or more characters long, change
 //  the feedback text to say "Thanks for your submission!" and change
 //  the color of the text to green.
 //
@@ -105,5 +128,23 @@ document.querySelector('#submit') = function(){
 
 /// TODO: replace this with your code
 
+
+//stop the default of a form 
+// querySelector any buttons 
+// 
+
+const validButton = document.querySelector('#submit')
+const inputNumber = document.querySelector.input('#word')
+const colorName = document.querySelector(".from-feedback")
+
+validButton.addEventListener("click", (e)=>{
+    e.preventDefault()
+    if ({inputNumber}) >= 4 { 
+    colorName.style.color = "green"
+    } else (
+        colorname.style.color= "red"
+
+    )
+})
 
 
