@@ -133,18 +133,22 @@ redBtn.addEventListener('click', () => {
 // querySelector any buttons 
 // 
 
-const validButton = document.querySelector('#submit')
-const inputNumber = document.querySelector.input('#word')
-const colorName = document.querySelector(".from-feedback")
+const wordForm = document.querySelector("#recommend-word")
+const input = document.querySelector('#word')
+const colorName = document.querySelector(".form-feedback")
 
-validButton.addEventListener("click", (e)=>{
-    e.preventDefault()
-    if ({inputNumber}) >= 4 { 
-    colorName.style.color = "green"
-    } else (
-        colorname.style.color= "red"
+wordForm.addEventListener("submit", (e) => {
+  e.preventDefault()
 
-    )
+  let strLength = input.value.length
+  if (strLength >= 4) {
+    colorName.style.color = 'green'
+    colorName.innerText = 'Thanks for your submission!'
+  } else {
+    colorName.style.color = 'red'
+    colorName.innerText = 'The word must be at least 4 characters long.'
+  }
+
 })
 
 
